@@ -33,6 +33,223 @@ body {
   margin-left: 0;
 }
 
+#who ul {
+  margin: -4px 13px 0px 0px;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  float: right;
+  background: #F0F0F0;
+  border: 1px solid #CCCCCC;
+  border-radius: 3px;    
+
+}
+
+#who li {
+  float: left;          
+}
+#who fieldset { border:none;}
+
+#who #login {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.9);
+}
+#who #logout {
+  display: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.9);
+}
+
+#who #login-trigger,
+#who #logout-trigger,
+#who #signup a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  height: 27px;
+  line-height: 26px;
+  font-weight: bold;
+  padding: 0 8px;
+  text-decoration: none;
+  color: #21265d;
+  text-shadow: 0 1px 0 #fff; 
+  font-size:12px;
+}
+
+#who #signup a {
+  border-radius: 0 3px 3px 0;
+}
+
+#who #login-trigger, #who #logout-trigger {
+  border-radius: 3px 0 0 3px;
+}
+
+#who #login-trigger:hover,
+#who #logout-trigger:hover,
+#who #login .active,
+#who #logout .active,
+#who #signup a:hover {
+  background: #fff;
+}
+
+#who #login-content, #who #logout-content {
+  display: none;
+  position: absolute;
+  top: 26px;
+  right: 0;
+  margin-right:-1px;
+  z-index: 999;    
+  background: #fff;
+  border-right: #C4C4C4 solid 1px;
+  background-image: linear-gradient(top, #fff, #eee);  
+  padding: 15px 5px 10px 15px;
+  box-shadow: 0px 2px 2px -1px rgba(0,0,0,.9);
+  border-radius: 3px 0 3px 3px;
+}
+
+#who li #login-content, #who li #logout-content {
+  right: 0;
+  width: 250px;  
+}
+
+/*--------------------*/
+
+#who #login input {
+  background: #f1f1f1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 160px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #ccc inset;
+  font-size:12px;
+}
+#who #logout input[type="text"][readonly] {
+  background: #B2DDF1;
+  padding: 6px 5px;
+  margin: 0 0 5px 0;
+  width: 228px;
+  border: 1px solid #0187B9;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px #006084 inset;
+  font-size:12px;
+  font-weight:bold;
+  color:#191b44;
+}
+
+#who #inputs input:focus {
+  background-color: #fff;
+  border-color: #e8c291;
+  outline: none;
+  box-shadow: 0 0 0 1px #e8c291 inset;
+}
+
+/*--------------------*/
+
+#who #login #actions, #who #logout #actions {
+  margin: 0px;
+}
+
+#who #login #insubmit, #who #logout #outsubmit {    
+  background-color: #0187B9;
+  background-image: linear-gradient(top, #0187B9, #0079A7);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #006084;
+  float: right;
+  height: 28px;
+  padding: 0;
+  width: 80px;
+  margin-right:10px;
+  cursor: pointer;
+  font: bold 12px Arial, Helvetica;
+  color: #fff;
+}
+
+
+#who #login #insubmit:hover,
+#who #login #insubmit:focus,
+#who #logout #outsubmit:hover,
+#who #logout #outsubmit:focus {    
+  background-color: #0079A7;
+  background-image: linear-gradient(top, #0079A7, #0187B9);
+} 
+
+#who #login #insubmit:active, #who #logout #outsubmit:active {   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+#who #login #insubmit::-moz-focus-inner, #who #logout #outsubmit::-moz-focus-inner {
+  border: none;
+}
+
+#who #login #incancel, #who #logout #outcancel {
+  background-color: #DDDDDD;
+  background-image: linear-gradient(top, #DDDDDD, #CCCCCC);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #AAAAAA;
+  float: right;
+  height: 28px;
+  padding: 0;
+  width: 80px;
+  margin-right:10px;
+  cursor: pointer;
+  font: bold 12px Arial, Helvetica;
+  color: #404040;
+}
+
+#who #login #incancel:hover,
+#who #login #incancel:focus,
+#who #logout #outcancel:hover,
+#who #logout #outcancel:focus {    
+  background-color: #D4D4D4;
+  background-image: linear-gradient(top, #D4D4D4, #C4C4C4);
+} 
+#who #login #incancel:active, #who #logout #outcancel:active {   
+  outline: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;   
+}
+
+#who #login label, #who #logout label {
+  float: left;
+  line-height: 30px;
+  width: 70px;
+}
+#who #login-content #actions label {
+  float: left;
+  line-height: 30px;
+  width: 160px;
+  margin-left:70px;
+  margin-top:10px;
+}
+#who #logout-content #actions label{
+  float: right;
+  line-height: 30px;
+  width: 100px;
+  margin-left:0px;
+  margin-right:5px;
+  margin-top:0px;
+}
+#who #logout-content h3{
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+#who #login label input, #who #logout label input {
+  position: relative;
+  top: 2px;
+  right: 2px;
+}
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
